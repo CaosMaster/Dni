@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txttitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introduce el DNI"
+        android:layout_margin="20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_below="@+id/txttitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <EditText
+            android:id="@+id/editnumero"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="numero DNI "
+            android:layout_below="@+id/txttitulo"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_toRightOf="@+id/editnumero"
+            android:layout_below="@+id/txttitulo"
+            />
+
+        <EditText
+            android:id="@+id/editletra"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:hint="letra "
+            android:layout_below="@+id/txttitulo"
+            android:maxLength="1"
+            android:inputType="text"
+            />
+    </LinearLayout>>
+
+
+    <Button
+        android:id="@+id/btnValidar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="VALIDAR DNI"
+        android:onClick="validar"
+        android:layout_below="@+id/linear"
+        />
+
+    <TextView
+        android:id="@+id/txtmensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:layout_below="@+id/btnValidar"
+        />
+
+</RelativeLayout>
